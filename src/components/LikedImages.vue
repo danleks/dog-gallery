@@ -48,18 +48,10 @@ export default {
 
         img {
             width: 100%;
-
-            @media(min-width: 1024px) {
-                width: 30%;
-            }
         }
 
         video {
             width: 100%;
-
-            @media(min-width: 1024px) {
-                width: 30%;
-            }
         }
     }
 
