@@ -1,11 +1,12 @@
 # dog-gallery app
 
-This app uses Random dog API to fetch images and display them.
+This app uses RandomDog API to fetch random pictures of dogs and display them.
 
 ## helpful links:
-* [ORIGIN](https://random.dog/)
 
-* [Live version](https://flamboyant-mestorf-d0f16f.netlify.com/)
+* [Live version of the APP](https://flamboyant-mestorf-d0f16f.netlify.com/)
+
+* [API SOURCE](https://random.dog/)
 
 ## Project setup
 ```
