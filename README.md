@@ -1,8 +1,11 @@
-# dog-gallery
+# dog-gallery app
 
-## Link to live version:
+This app uses Random dog API to fetch images and display them.
 
-## https://flamboyant-mestorf-d0f16f.netlify.com/
+## helpful links:
+* [ORIGIN] (https://random.dog/)
+
+*[Live version] (https://flamboyant-mestorf-d0f16f.netlify.com/)
 
 ## Project setup
 ```
