@@ -44,6 +44,7 @@ export default {
 
     .imgWrapper {
         width: 100%;
+        text-align: center;
 
 
         img {
