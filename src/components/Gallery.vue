@@ -5,7 +5,7 @@
         <transition name="slideLeft">
             <MainImage v-if="loading === false" @next-image="$emit('next-image')" :img="img" :video="video" />
         </transition>
-        <MediaPanel :likedDogs="likedDogs" @next-image="$emit('next-image')"/>
+        <MediaPanel @like="$emit('like')" :likedImg="likedImg" :likedDogs="likedDogs" @next-image="$emit('next-image')"/>
     </div>
 
 </template>
@@ -44,7 +44,12 @@ export default {
         likedDogs: {
           type: Array,
           required: true,
-        }
+        },
+
+        likedImg: {
+            type: Boolean,
+            required: true,
+        },
     }
 }
 </script>

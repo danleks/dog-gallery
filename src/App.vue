@@ -5,11 +5,14 @@
         <button slot="button" @click="openGallery(), getDogImages()" class="button">Start exploring</button>
     </Claim>
     <transition name="slide">
-      <Gallery @next-image="getDogImages"
+      <Gallery
+      @next-image="getDogImages"
+      @like="addToFavs"
       :loading="loading"
       :img="image"
       :video="video"
       :likedDogs="likedDogs"
+      :likedImg="likedImg"
       v-if="galleryOpened"/>
     </transition>
   </div>
@@ -36,6 +39,7 @@ export default {
       video: '',
       loading: true,
       likedDogs: [],
+      likedImg: false,
 
     }
   },
@@ -55,10 +59,12 @@ export default {
           this.video = `https://random.dog/${response.data}`;
           this.image = '';
           this.loading = false;
+          this.likedImg = false;
         } else {
           this.image = `https://random.dog/${response.data}`;
           this.video = '';
           this.loading = false;
+          this.likedImg = false;
 
         }
 
@@ -74,6 +80,17 @@ export default {
       this.claim = false;
 
     },
+
+    addToFavs() {
+
+      if (this.likedDogs.indexOf(this.image) === -1 && this.image !== '') {
+          this.likedDogs.push(this.image);
+      } else if (this.likedDogs.indexOf(this.video) === -1 && this.video !== '') {
+          this.likedDogs.push(this.video);
+      }
+
+      return this.likedImg = true;
+    }
   }
 };
 </script>
