@@ -2,7 +2,7 @@
   <div id="app">
     <HeroImage v-if="views.heroImage" />
     <Claim v-if="views.claim" @start-exploring="openGallery">
-        <button slot="button" @click="openGallery(), getDogImages()" class="button">Start exploring</button>
+        <a href="#" slot="button" @click="openGallery(), getDogImages()" class="button">Start exploring</a>
     </Claim>
     <transition name="slide">
       <Gallery
@@ -93,7 +93,7 @@ export default {
       .catch(error => {
         console.log(error);
       })
-    }, 500),
+    }, 800000000),
 
     openGallery() {
       this.views.heroImage = false;
@@ -142,14 +142,21 @@ export default {
 
 // HERO IMAGE BUTTON
   .button {
-        padding: 10px 25px;
-        border: none;
-        margin-top: 50px;
-        background-color: #000;
-        color: #fff;
-        text-transform: uppercase;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
-        transition: all .1s;
+
+        &:link,
+        &:visited {
+          display: inline-block;
+          padding: 20px 30px;
+          border: none;
+          margin-top: 50px;
+          background-color: #000;
+          color: #fff;
+          text-transform: uppercase;
+          text-decoration: none;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+          transition: all .3s;
+        }
+
 
         @media (min-width: 768px) {
             padding: 25px 50px;
@@ -162,8 +169,21 @@ export default {
         &:focus {
             outline: none;
             border: none;
-            transform: translateY(-1px);
+            //transform: translateY(20px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+        }
+
+        &:hover {
+          cursor: pointer;
+          //transform: translateY(-1px);
+          box-shadow: 0 15px 20px rgba(0, 0, 0, .3);
+        }
+
+         &:active {
+            transform: translateY(2px);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+
+
         }
   }
 
