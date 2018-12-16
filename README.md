@@ -1,6 +1,8 @@
 # dog-gallery
 
-# Link to live version: https://flamboyant-mestorf-d0f16f.netlify.com/
+## Link to live version:
+
+## https://flamboyant-mestorf-d0f16f.netlify.com/
 
 ## Project setup
 ```
