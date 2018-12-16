@@ -93,7 +93,7 @@ export default {
       .catch(error => {
         console.log(error);
       })
-    }, 1500),
+    }, 500),
 
     openGallery() {
       this.views.heroImage = false;
