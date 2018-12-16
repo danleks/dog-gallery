@@ -7,8 +7,7 @@
         <p class="claim__text">
             Swipe through the galary of dogs and choose your favourite ones.
         </p>
-
-        <button class="claim__button">Start exploring</button>
+        <slot name="button"></slot>
     </div>
 </template>
 
@@ -40,38 +39,6 @@ export default {
 
              @media (min-width: 768px) {
                 font-size: 18px;
-            }
-        }
-
-        &__button {
-            padding: 10px 25px;
-            border: none;
-            margin-top: 50px;
-            background-color: #000;
-            color: #fff;
-            text-transform: uppercase;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
-            transition: all .1s;
-
-            @media (min-width: 768px) {
-                padding: 25px 50px;
-                margin-top: 60px;
-                font-size: 25px;
-            }
-
-            @media (max-height: 674px) {
-                margin-top: 40px;
-
-            }
-
-
-            &:focus {
-                outline: none;
-                border: none;
-                transform: translateY(-1px);
-                box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
-
-
             }
         }
     }
