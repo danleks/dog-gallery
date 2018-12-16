@@ -1,20 +1,41 @@
 <template>
     <div class="mediaPanel">
-        <i class="fas fa-dog">
+        <i @click="$emit('show-imgs', false)" class="fas fa-dog">
             <span class="mediaPanel__counter">{{likedDogs.length}}</span>
         </i>
-        <i class="fas fa-heart"></i>
+        <i @click="$emit('like')" :style="[likedImg ? liked : notLiked]"  class="fas fa-heart"></i>
         <i @click="$emit('next-image')" class="fas fa-arrow-right"></i>
     </div>
 </template>
 
 <script>
 export default {
+    data() {
+        return {
+            liked: {
+                color: 'red',
+            },
+
+            notLiked: {
+                color: 'white',
+            }
+        }
+    },
+
     props: {
         likedDogs: {
             type: Array,
             required: true,
-        }
+        },
+
+        likedImg: {
+            type: Boolean,
+            required: true,
+        },
+    },
+
+    created() {
+        console.log(this.likedImg);
     }
 
 }
@@ -48,7 +69,7 @@ export default {
                         right: -10px;
                         top: -8px;
                         font-size: 18px;
-                        color: #f2bbbf;
+                        color: #fff;
                     }
                 }
 
