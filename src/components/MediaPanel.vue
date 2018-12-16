@@ -1,6 +1,6 @@
 <template>
     <div class="mediaPanel">
-        <i class="fas fa-dog">
+        <i @click="$emit('show-imgs', false)" class="fas fa-dog">
             <span class="mediaPanel__counter">{{likedDogs.length}}</span>
         </i>
         <i @click="$emit('like')" :style="[likedImg ? liked : notLiked]"  class="fas fa-heart"></i>
