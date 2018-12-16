@@ -3,9 +3,9 @@
 This app uses Random dog API to fetch images and display them.
 
 ## helpful links:
-* [ORIGIN] (https://random.dog/)
+* [ORIGIN](https://random.dog/)
 
-*[Live version] (https://flamboyant-mestorf-d0f16f.netlify.com/)
+* [Live version](https://flamboyant-mestorf-d0f16f.netlify.com/)
 
 ## Project setup
 ```
