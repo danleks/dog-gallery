@@ -171,7 +171,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
-    height: 100vh;
+    height: 100%;
 
     @media(min-width: 1024px) {
       width: 50%;
